@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo App 2 — RaksAppSSO</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="panel">
+      <p class="eyebrow">RaksAppSSO · client: demo-app</p>
+      <h1>Demo App 2</h1>
+      <p class="intro">
+        Second app on port <strong>4201</strong>. Sign in here, then open another app in the
+        <code>myapps</code> realm — Keycloak should keep you signed in (SSO).
+      </p>
+
+      <div id="logged-out" class="actions">
+        <button id="login-btn" type="button">Sign in with Keycloak</button>
+      </div>
+
+      <div id="logged-in" class="hidden">
+        <p class="status ok">Signed in via SSO</p>
+        <dl class="user-info">
+          <dt>Name</dt>
+          <dd id="user-name">—</dd>
+          <dt>Email</dt>
+          <dd id="user-email">—</dd>
+        </dl>
+        <button id="logout-btn" type="button" class="secondary">Sign out</button>
+      </div>
+
+      <p id="error" class="status error hidden"></p>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
